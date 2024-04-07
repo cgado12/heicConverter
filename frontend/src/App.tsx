@@ -1,28 +1,44 @@
-import {useState} from 'react';
-import logo from './assets/images/logo-universal.png';
-import './App.css';
-import {Greet} from "../wailsjs/go/main/App";
+import { useEffect, useState } from "react";
+import { ActionIcon, Button, Container, Text } from "@mantine/core";
+import "@mantine/core/styles.css";
+import "@mantine/dropzone/styles.css";
+import { GetOutDir, Greet, SetOutDir } from "../wailsjs/go/main/App";
+import DropzoneArea from "./components/Dropzone";
+import { IconFolder } from "@tabler/icons-react";
 
-function App() {
-    const [resultText, setResultText] = useState("Please enter your name below 👇");
-    const [name, setName] = useState('');
-    const updateName = (e: any) => setName(e.target.value);
-    const updateResultText = (result: string) => setResultText(result);
+import "./App.css";
 
-    function greet() {
-        Greet(name).then(updateResultText);
+const App = () => {
+  const [outDir, setDir] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const getDir = async () => {
+      const dir = await GetOutDir();
+      setDir(dir);
+    };
+    if (!outDir) {
+      getDir();
     }
+  }, []);
 
-    return (
-        <div id="App">
-            <img src={logo} id="logo" alt="logo"/>
-            <div id="result" className="result">{resultText}</div>
-            <div id="input" className="input-box">
-                <input id="name" className="input" onChange={updateName} autoComplete="off" name="input" type="text"/>
-                <button className="btn" onClick={greet}>Greet</button>
-            </div>
-        </div>
-    )
-}
+  const setOutDirectory = async () => {
+    const dir = await SetOutDir();
+    setDir(dir)
+  };
 
-export default App
+  return (
+    <div id="App">
+      <div className="output-dir-container">
+        <Text>Output Directory: {outDir}</Text>
+        <ActionIcon size="md" variant="outline" onClick={setOutDirectory}>
+          <IconFolder size={32} />
+        </ActionIcon>
+      </div>
+      <div className="container">
+        <DropzoneArea />
+      </div>
+    </div>
+  );
+};
+
+export default App;
