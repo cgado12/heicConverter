@@ -72,7 +72,7 @@ const DropzoneArea = () => {
 
           <div>
             <Text size="xl" inline>
-              Please Click to select files
+              Please Click or Drag and Drop to convert files
             </Text>
             <Text size="sm" c="dimmed" inline mt={7}>
               Attach as many files as you like!

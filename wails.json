@@ -9,5 +9,13 @@
   "author": {
     "name": "Chris Salgado",
     "email": "cgado12@gmail.com"
+  },
+  "info": {
+    "companyName": "heicConverter",
+    "productName": "Heic2PNG",
+    "description": "A simple HEIC to PNG converter",
+    "productVersion": "0.1.0",
+    "license": "MIT"
+
   }
 }

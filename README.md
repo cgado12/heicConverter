@@ -1,13 +1,19 @@
-# README
+<div style="text-align: center">
+<img style="max-height: 275px" src="./build/appicon.png"/>
+</div>
 
-## About
+# HeicConverter: Heic 2 PNG
+<div style="text-align: center">
+<img style="max-height: 250px" src="./assets/program-screenshot.png"/>
+</div>
 
-This is the official Wails React-TS template.
+This is a desktop application project that aims to convert heic images to png format because I needed something quick and easy to convert pictures off my phone. **This does not upload your images anywhere else and does the conversion locally on your machine.** In the future we will support other filetypes but this is what I needed most for now!
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+Built with [wails](https://wails.io/docs/introduction)
 
-## Live Development
+Please download via our releases page or feel free to build from source!
+
+### Live Development
 
 To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
 server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
