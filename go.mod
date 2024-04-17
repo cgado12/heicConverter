@@ -4,12 +4,12 @@ go 1.21
 
 toolchain go1.21.6
 
-require github.com/wailsapp/wails/v2 v2.8.0
-
-require github.com/strukturag/libheif v1.16.2 // indirect
+require (
+	github.com/strukturag/libheif v1.17.6
+	github.com/wailsapp/wails/v2 v2.8.0
+)
 
 require (
-	github.com/MaestroError/go-libheif v0.0.0-20230605164253-e36e44eed645
 	github.com/bep/debounce v1.2.1 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect

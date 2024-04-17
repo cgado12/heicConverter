@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ActionIcon, Button, Container, Text } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/dropzone/styles.css";
-import { GetOutDir, Greet, SetOutDir } from "../wailsjs/go/main/App";
+import { GetOutDir, SetOutDir } from "../wailsjs/go/main/App";
 import DropzoneArea from "./components/Dropzone";
 import { IconFolder } from "@tabler/icons-react";
 
@@ -23,7 +23,7 @@ const App = () => {
 
   const setOutDirectory = async () => {
     const dir = await SetOutDir();
-    setDir(dir)
+    setDir(dir);
   };
 
   return (

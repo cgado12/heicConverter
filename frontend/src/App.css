@@ -15,4 +15,5 @@
     padding: 3rem 3rem 0 2rem;
     overFlow: hidden;
     text-overflow: ellipsis;
+    word-wrap: unset;
 }
