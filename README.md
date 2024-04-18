@@ -1,5 +1,5 @@
 <div style="text-align: center">
-<img style="max-height: 275px" src="./build/appicon.png"/>
+<img style="max-height: 200px" src="./build/appicon.png"/>
 </div>
 
 # HeicConverter: Heic 2 PNG
